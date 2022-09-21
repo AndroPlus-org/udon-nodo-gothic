@@ -72,16 +72,15 @@ for font in IMPORT.glob("*.ttf"):
     for platformID in [1033, 1041]:
         name = str(sourceTTF["name"].getName(1,3,1,platformID))
 
-        sourceTTF["name"].setName("Copyright 2022 The BIZ UDGothic Project Authors (https://github.com/googlefonts/morisawa-biz-ud-gothic)",0,3,1,platformID)
+        sourceTTF["name"].setName("Copyright 2022 AndroPlus",0,3,1,platformID)
         sourceTTF["name"].setName("Version "+VERSION,5,3,1,platformID)
 
         if "Bold" in fontName: #aligning psnames with google standards. Shouldn't impact compatibility.
-            sourceTTF["name"].setName(name.replace("BIZ ","BIZ")+"-Bold",6,3,1,platformID)
+            sourceTTF["name"].setName(name.replace("BIZ UDGothic","UDon Nodo Gothic")+"-Bold",6,3,1,platformID)
         else:
-            sourceTTF["name"].setName(name.replace("BIZ ","BIZ")+"-Regular",6,3,1,platformID)
+            sourceTTF["name"].setName(name.replace("BIZ UDGothic","UDon Nodo Gothic")+"-Regular",6,3,1,platformID)
 
         if platformID == 1033:        
-            sourceTTF["name"].setName(name+" is a trademark of Morisawa Inc.",7,3,1,platformID)
             sourceTTF["name"].setName("This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",13,3,1,platformID)
             sourceTTF["name"].setName("https://scripts.sil.org/OFL",14,3,1,platformID)
 

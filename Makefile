@@ -3,7 +3,7 @@ DRAWBOT_OUTPUT=$(shell ls documentation/*.py | sed 's/\.py/.png/g')
 
 help:
 	@echo "###"
-	@echo "# Build targets for UD Gothic"
+	@echo "# Build targets for UDon Nodo Gothic"
 	@echo "###"
 	@echo
 	@echo "  make build:  Builds the fonts and places them in the fonts/ directory"
